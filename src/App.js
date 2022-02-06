@@ -1,25 +1,24 @@
-import logo from './logo.svg';
+
 import './App.css';
+import Profile from './Profile/Profile';
+import Skan from '../src/Skan.jpg'
 
 function App() {
+  var fullName = 'Skander Hammami', bio = 'xxxxxxxx' ,profession = 'Student'
+  const handleName = () => {
+    alert.show({fullName})
+  }
+ const stylee = {color : "red"}
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={stylee}>
+       <Profile  fullName={fullName} bio={bio} profession={profession} Skan={Skan} handleName={handleName}> 
+       {Skan}  
+       </Profile>
+       
     </div>
   );
+  
 }
+
 
 export default App;
